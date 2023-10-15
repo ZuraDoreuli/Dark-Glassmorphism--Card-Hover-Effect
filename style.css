@@ -1,0 +1,85 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #171717;
+  font-family: 'Courier New', Courier, monospace;
+}
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+.card {
+  position: relative;
+  width: 320px;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 20px 20px 50px #00000070;
+  background-color: #70707021;
+  backdrop-filter: blur(5px);
+  border-top: 1px solid #ffffff70;
+  border-left: 1px solid #ffffff70;
+  overflow: hidden;
+  cursor: pointer;
+}
+.card img {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  width: 90%;
+  height: 75%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: all 0.4s ease-in-out;
+}
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  transform: translateY(40px);
+  transition: all 0.4s ease-in-out;
+}
+.card:hover .content {
+  transform: translateY(-30px);
+}
+.card:hover img {
+  height: 60%;
+}
+.card h2 {
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #bbb;
+}
+.card a {
+  display: inline-block;
+  text-decoration: none;
+  color: #181818;
+  padding: 10px 30px;
+  background-color: #969696;
+  box-shadow: 20px 20px 50px #00000070;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  transition: all 0.4s ease-in-out;
+}
+.card a:hover {
+  padding: 10px 35px;
+  letter-spacing: 5px;
+}
